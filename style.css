@@ -1,0 +1,151 @@
+/* ---- Base ---- */
+:root {
+    --bg: #1B4D3E;
+    --bg-alt: #22223b;
+    --text: #f2f2f2;
+    --text-muted: #b8b8c8;
+    --accent: #f4a261;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Merienda", cursive;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.site-header {
+    background-image: url('images/forest-path.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+    font-family: 'Felipa', serif;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Header / hero ---- */
+.site-header {
+    padding: 40px 20px 30px;
+    text-align: center;
+    background-color: var(--bg-alt);
+}
+
+.site-header h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.notice {
+    color: white;
+    -webkit-text-stroke-width: 1 px;
+    -webkit-text-stroke-color: black;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* ---- Sections ---- */
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* ---- Timeline style (shared by Life's stepping stones + Life's hardships) ---- */
+.timeline ol,
+.timeline ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    border-left: 2px solid var(--accent);
+}
+
+.timeline li {
+    list-style: none;
+    position: relative;
+    padding: 0 0 20px 24px;
+}
+
+.timeline li::marker {
+    content: "";
+}
+
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+
+/* ---- Contact / support links ---- */
+.social-links a,
+.donate-links a {
+    margin-right: 16px;
+    display: inline-block;
+}
+
+/* ---- Footer ---- */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 480px) {
+    .site-header h1 {
+        font-size: 1.5rem;
+    }
+}
